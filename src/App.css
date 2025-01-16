@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+.App {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f003fc;
+  border-radius: 6px; 
+  border: 0.1rem solid black;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  border: 0.1rem solid white;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #f003fc transparent;
+}
