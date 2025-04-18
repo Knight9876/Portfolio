@@ -43,7 +43,7 @@ const DarkModeToggle = () => {
     <div className='mr-5'>
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black transition-transform duration-300 transform hover:scale-110 dark:drop-shadow-customPurpleDropShadow dark:shadow-customPurpleBoxShadow dark:border-white relative"
+        className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black transition-transform duration-300 transform hover:scale-110 dark:drop-shadow-customPurpleDropShadow dark:shadow-customPurpleBoxShadow dark:border-white"
       >
         {/* Moon Icon */}
         <FontAwesomeIcon

@@ -2,7 +2,7 @@ const internships = [
   {
     company: "Software Developer Advance Computing",
     location: "Mumbai",
-    duration: "December 2024 - Februaru 2025",
+    duration: "December 2024 - February 2025",
     mode: "On-Site",
     projects: [
       {
