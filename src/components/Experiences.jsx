@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import InternshipCard from "./InternshipCard";
 import experiences from "../data/experiences";
 import ExperienceCard from "./ExperienceCard";
 
