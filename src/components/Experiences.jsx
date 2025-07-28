@@ -30,61 +30,61 @@ const Experiences = () => {
       }
     );
 
-      // Experience cards animation
-  // Experience cards animation
-  cardsRef.current.forEach((card, index) => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: card,
-        start: "top 85%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
+    // Experience cards animation
+    // Experience cards animation
+    cardsRef.current.forEach((card, index) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
 
-    tl.fromTo(
-      card,
-      {
-        opacity: 0,
-        scale: 0.7,
-        rotationY: 180, // Start with a twist
-        y: 100, // Start from below
-        z: 200, // Start further out for 3D effect
-        ease: "power4.out",
-        willChange: "transform, opacity", // Optimization hint
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        rotationY: 0, // End at normal rotation
-        y: 0, // End at normal position
-        z: 0, // End at normal position
-        duration: 1.5,
-        ease: "power4.out",
-        delay: index * 0.3, // Stagger with a delay for sequential entrance
-      }
-    )
-      .to(
+      tl.fromTo(
         card,
         {
-          scale: 1.05, // Slight overscale
-          rotationX: 15, // Add some X-axis rotation
-          duration: 0.3,
-          ease: "back.out(2.0)", // Bounce-like easing
+          opacity: 0,
+          scale: 0.7,
+          rotationY: 180, // Start with a twist
+          y: 100, // Start from below
+          z: 200, // Start further out for 3D effect
+          ease: "power4.out",
+          willChange: "transform, opacity", // Optimization hint
         },
-        "-=0.5" // Overlap with previous animation for smoother flow
+        {
+          opacity: 1,
+          scale: 1,
+          rotationY: 0, // End at normal rotation
+          y: 0, // End at normal position
+          z: 0, // End at normal position
+          duration: 1.5,
+          ease: "power4.out",
+          delay: index * 0.3, // Stagger with a delay for sequential entrance
+        }
       )
-      .to(
-        card,
-        {
-          scale: 1, // Settle back to normal size
-          rotationX: 0, // Reset rotation
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "-=0.2" // Sync with the earlier animation
-      );
-  });
-}, []);
+        .to(
+          card,
+          {
+            scale: 1.05, // Slight overscale
+            rotationX: 15, // Add some X-axis rotation
+            duration: 0.3,
+            ease: "back.out(2.0)", // Bounce-like easing
+          },
+          "-=0.5" // Overlap with previous animation for smoother flow
+        )
+        .to(
+          card,
+          {
+            scale: 1, // Settle back to normal size
+            rotationX: 0, // Reset rotation
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          "-=0.2" // Sync with the earlier animation
+        );
+    });
+  }, []);
 
   const addToRefs = (el) => {
     if (el && !cardsRef.current.includes(el)) {
@@ -93,17 +93,23 @@ const Experiences = () => {
   };
 
   return (
-    <section id="experiences" className="pb-20 text-start dark:drop-shadow-customPurpleDropShadow">
+    <section
+      id="experiences"
+      className="pb-20 text-start dark:drop-shadow-customPurpleDropShadow"
+    >
       <div className="flex flex-row items-center pb-8 -ml-1.5">
         <div className="border-r-8 border-customPurple bg-white dark:bg-black rounded-lg pb-8 z-10">
           &nbsp;
         </div>
-        <h1 ref={headerRef} className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow">
+        <h1
+          ref={headerRef}
+          className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
+        >
           Experiences
         </h1>
       </div>
       <div className="container mx-auto px-4">
-      <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={index}

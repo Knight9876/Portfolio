@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-import resume from "../assets/resume.pdf"
+import resume from "../assets/resume.pdf";
 
 const Resume = () => {
   const handleDownload = () => {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = resume;
-    link.download = 'Yash Kamble.pdf'; // Custom file name
+    link.download = "Yash Kamble.pdf"; // Custom file name
     link.click();
   };
 
@@ -37,10 +37,10 @@ const Resume = () => {
         ease: "power1.out",
         stagger: 0.2,
         scrollTrigger: {
-            trigger: buttonRef.current, // Trigger animation when the button enters the viewport
-            start: "top 100%", // Adjust this value to control when the animation starts
-            toggleActions: "play reverse play reverse", // Repeat on scroll
-          },
+          trigger: buttonRef.current, // Trigger animation when the button enters the viewport
+          start: "top 100%", // Adjust this value to control when the animation starts
+          toggleActions: "play reverse play reverse", // Repeat on scroll
+        },
       }
     );
 
@@ -56,9 +56,7 @@ const Resume = () => {
   }, []);
 
   return (
-    <section
-      id="resume"
-    >
+    <section id="resume">
       <button
         ref={buttonRef}
         onClick={handleDownload}

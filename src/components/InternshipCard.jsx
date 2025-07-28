@@ -28,7 +28,9 @@ const InternshipCard = ({ internship, addToRefs }) => {
         <h4 className="transition-colors duration-500 text-lg font-medium ">
           Description:
         </h4>
-        <p className="transition-colors duration-500">{internship.description}</p>
+        <p className="transition-colors duration-500">
+          {internship.description}
+        </p>
       </div>
       <div className="mt-4 flex flex-col md:flex-row gap-2 items-center">
         <h4 className="transition-colors duration-500 text-lg font-medium">

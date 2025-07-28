@@ -39,7 +39,7 @@ const Internships = () => {
           toggleActions: "play reverse play reverse",
         },
       });
-  
+
       tl.fromTo(
         card,
         {
@@ -88,12 +88,18 @@ const Internships = () => {
   };
 
   return (
-    <section id="internships" className="pb-20 text-start dark:drop-shadow-customPurpleDropShadow">
+    <section
+      id="internships"
+      className="pb-20 text-start dark:drop-shadow-customPurpleDropShadow"
+    >
       <div className="flex flex-row items-center pb-8 -ml-1.5">
         <div className="border-r-8 border-customPurple bg-white dark:bg-black rounded-lg pb-8 z-10">
           &nbsp;
         </div>
-        <h1 ref={headerRef} className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow">
+        <h1
+          ref={headerRef}
+          className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
+        >
           Internships
         </h1>
       </div>

@@ -1,4 +1,9 @@
-import { faLinkedin, faGithub, faXTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faXTwitter,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
   {
@@ -15,8 +20,9 @@ const socialLinks = [
   },
   {
     href: "https://www.naukri.com/mnjuser/profile?id=&altresid",
-    icon: null, // You can replace this with the Naukri logo as an image in Contact.jsx
-    imgSrc: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791980/logo/naukri_keibtd.png", // Path to the image
+    icon: null,
+    imgSrc:
+      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791980/logo/naukri_keibtd.png", // Path to the image
     alt: "Naukri",
   },
   {

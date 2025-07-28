@@ -33,9 +33,11 @@ const ProjectCard = ({ project, index, addToRefs, settings }) => (
       <p className="text-justify mt-4">{project.description}</p>
       <div className="mt-4 flex flex-col md:flex-row gap-4 items-center">
         <strong>Technologies Used: </strong>
-        <div className={`flex flex-wrap gap-4 transition-colors duration-500 sm:justify-center ${
-      index % 2 !== 0 ? "lg:flex-row-reverse md:flex-row-reverse" : ""
-    }`}>
+        <div
+          className={`flex flex-wrap gap-4 transition-colors duration-500 sm:justify-center ${
+            index % 2 !== 0 ? "lg:flex-row-reverse md:flex-row-reverse" : ""
+          }`}
+        >
           {project.technologies.map((tech, index) => (
             <div
               key={index}

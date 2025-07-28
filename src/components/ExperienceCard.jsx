@@ -10,7 +10,6 @@ const ExperienceCard = ({ experience, addToRefs }) => {
     mode,
     techStack,
     responsibilities,
-    highlights,
   } = experience;
 
   return (
@@ -43,21 +42,8 @@ const ExperienceCard = ({ experience, addToRefs }) => {
         <h4 className="transition-colors duration-500 text-lg font-medium">
           Responsibilities:
         </h4>
-        <ul className="transition-colors duration-500 list-disc list-inside mt-2">
+        <ul className="transition-colors duration-500 list-disc list-outside mt-2 px-5">
           {responsibilities.map((item, index) => (
-            <li className="pb-2" key={index}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mt-4">
-        <h4 className="transition-colors duration-500 text-lg font-medium">
-          Highlights:
-        </h4>
-        <ul className="transition-colors duration-500 list-disc list-inside mt-2">
-          {highlights.map((item, index) => (
             <li className="pb-2" key={index}>
               {item}
             </li>
