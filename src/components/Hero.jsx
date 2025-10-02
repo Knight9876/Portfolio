@@ -72,7 +72,7 @@ const Hero = () => {
         >
           <img
             className="rounded-full object-cover aspect-[1/1] w-full max-w-[15rem] sm:max-w-[16rem] md:max-w-[16rem] lg:max-w-[20rem]"
-            src="https://res.cloudinary.com/dlnvozmgw/image/upload/v1753692061/logo/profile_iyakir.png"
+            src="https://res.cloudinary.com/dlnvozmgw/image/upload/v1759424006/Profile_Pic_eg67az.jpg"
             alt="Yash Kamble - Profile"
             loading="lazy"
           />
@@ -90,12 +90,12 @@ const Hero = () => {
           {/* Buttons */}
           <div className="flex justify-center gap-5 mt-4">
             <Link
-              to="projects"
+              to="experiences"
               smooth={true}
               duration={500}
               className="px-6 py-3 shadow-customPurpleBoxShadow bg-customPurple hover:bg-opacity-80 transition-all duration-300 rounded-lg font-bold text-lg cursor-pointer"
             >
-              Projects &nbsp; <FontAwesomeIcon icon={faArrowRight} />
+              Experience &nbsp; <FontAwesomeIcon icon={faArrowRight} />
             </Link>
             <Link
               to="resume"

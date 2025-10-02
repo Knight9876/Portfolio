@@ -86,24 +86,24 @@ const AboutMe = () => {
       </div>
       <div ref={aboutRef} className="container mx-auto px-4 text-justify">
         <p className="text-lg mb-6 md:mb-4 ">
-          I'm a frontend developer driven by a passion for crafting engaging and
-          innovative web experiences. My journey in web development began with a
-          fascination for technology and design, and I've since dedicated myself
-          to mastering frontend technologies and creating visually stunning,
-          interactive websites.
+          I'm a frontend developer passionate about crafting clean, interactive,
+          and user-friendly web experiences. I thrive on transforming complex
+          ideas into intuitive interfaces, leveraging modern technologies like
+          React, TypeScript, Next.js, and Electron to build responsive web and
+          cross-platform desktop applications.
         </p>
         <p className="text-lg mb-6 md:mb-4 ">
-          I thrive on transforming complex ideas into user-friendly interfaces,
-          leveraging the latest tools and frameworks to bring projects to life.
-          Whether it's implementing smooth animations, optimizing performance,
-          or designing intuitive user interfaces, I'm committed to delivering
-          high-quality results that stand out.
+          I enjoy bringing designs to life with maintainable, reusable code,
+          implementing smooth animations, optimizing performance, and creating
+          seamless user experiences. Through personal projects and contract
+          work, I've gained hands-on experience building dynamic web pages,
+          reusable components, and mobile apps with React Native and Expo.
         </p>
         <p className="text-lg ">
-          When I'm not coding, you'll find me exploring new tech trends, diving
-          into creative projects, or collaborating with fellow developers. Each
-          day brings a new opportunity to learn and grow, and I'm excited to see
-          where this journey takes me next.
+          Always eager to learn and grow, I'm looking for opportunities to
+          contribute to innovative projects, collaborate with experienced teams,
+          and expand my skill set in the fast-paced world of frontend
+          development.
         </p>
       </div>
     </div>

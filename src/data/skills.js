@@ -8,12 +8,36 @@ const skills = [
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
   },
   {
+    name: "React Native",
+    color: "bg-pink-300",
+    textColor: "text-pink-900",
+    darkBgColor: "dark:bg-pink-700",
+    darkTextColor: "dark:text-pink-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
+  },
+  {
     name: "TypeScript",
     color: "bg-sky-300",
     textColor: "text-sky-900",
     darkBgColor: "dark:bg-sky-700",
     darkTextColor: "dark:text-sky-100",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687325/logo/typescript_bcsmhg.png",
+  },
+  {
+    name: "Expo",
+    color: "bg-violet-300",
+    textColor: "text-violet-900",
+    darkBgColor: "dark:bg-violet-700",
+    darkTextColor: "dark:text-violet-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425811/expo_hhahle.png",
+  },
+  {
+    name: "Electron",
+    color: "bg-lime-300",
+    textColor: "text-lime-900",
+    darkBgColor: "dark:bg-lime-700",
+    darkTextColor: "dark:text-lime-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425247/Electron_u0yqch.webp",
   },
   {
     name: "JavaScript",
@@ -47,6 +71,15 @@ const skills = [
     darkTextColor: "dark:text-pink-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
   },
+  {
+    name: "SCSS",
+    color: "bg-cyan-200",
+    textColor: "text-cyan-900",
+    darkBgColor: "dark:bg-cyan-700",
+    darkTextColor: "dark:text-cyan-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430864/sass_ysjzyl.webp",
+  },
+
   {
     name: "GSAP",
     color: "bg-red-200",
@@ -86,14 +119,6 @@ const skills = [
     darkBgColor: "dark:bg-teal-600",
     darkTextColor: "dark:text-teal-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/git_iu7vmu.png",
-  },
-  {
-    name: "REST APIs",
-    color: "bg-indigo-200",
-    textColor: "text-indigo-800",
-    darkBgColor: "dark:bg-indigo-600",
-    darkTextColor: "dark:text-indigo-200",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791980/logo/rest_akneqe.png",
   },
   {
     name: "Cloudinary",

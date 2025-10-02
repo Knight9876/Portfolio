@@ -16,7 +16,9 @@ const ProjectCard = ({ project, index, addToRefs, settings }) => (
               src={image}
               alt={`${project.title} - ${i}`}
               loading="lazy"
-              className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110"
+              className={`w-full h-64 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110 ${
+                project.title === "Cosmic Explorer" ? "object-contain" : "object-cover"
+              }`}
             />
           </div>
         ))}
@@ -50,18 +52,22 @@ const ProjectCard = ({ project, index, addToRefs, settings }) => (
         </div>
       </div>
       <p className="mt-4">
-        <a
-          href={project.liveLink}
-          className="text-blue-600 dark:text-blue-400"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live Link
-        </a>{" "}
-        |
+        {project.liveLink && (
+          <>
+            <a
+              href={project.liveLink}
+              className="text-blue-600 dark:text-blue-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Link
+            </a>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          </>
+        )}
         <a
           href={project.githubLink}
-          className="text-blue-600 dark:text-blue-400 ml-2"
+          className="text-blue-600 dark:text-blue-400"
           target="_blank"
           rel="noopener noreferrer"
         >

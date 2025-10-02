@@ -15,7 +15,7 @@ const Experiences = () => {
     gsap.fromTo(
       headerRef.current,
       {
-        x: -270, // Start from offscreen (left)
+        x: -300, // Start from offscreen (left)
         willChange: "transform", // Hint for optimization
       },
       {
@@ -105,7 +105,7 @@ const Experiences = () => {
           ref={headerRef}
           className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
         >
-          Experiences
+          Experience
         </h1>
       </div>
       <div className="container mx-auto px-4">

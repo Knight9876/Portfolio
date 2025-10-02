@@ -60,7 +60,7 @@ const Header = () => {
               className="cursor-pointer hover:text-customPurple transition-colors duration-500"
               onClick={() => setIsMenuOpen(false)}
             >
-              Experiences
+              Experience
             </Link>
           </li>
           <li className="p-2 sm:py-0 sm:border-none dark:drop-shadow-customPurpleDropShadow">
