@@ -17,7 +17,9 @@ const ProjectCard = ({ project, index, addToRefs, settings }) => (
               alt={`${project.title} - ${i}`}
               loading="lazy"
               className={`w-full h-64 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110 ${
-                project.title === "Cosmic Explorer" ? "object-contain" : "object-cover"
+                project.title === "Cosmic Explorer"
+                  ? "object-contain"
+                  : "object-cover"
               }`}
             />
           </div>

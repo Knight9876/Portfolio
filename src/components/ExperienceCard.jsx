@@ -1,3 +1,5 @@
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const ExperienceCard = ({ experience, addToRefs }) => {
@@ -8,6 +10,7 @@ const ExperienceCard = ({ experience, addToRefs }) => {
     project,
     location,
     mode,
+    websiteUrl,
     techStack,
     responsibilities,
   } = experience;
@@ -35,7 +38,13 @@ const ExperienceCard = ({ experience, addToRefs }) => {
         <h4 className="transition-colors duration-500 text-lg font-medium">
           Project:
         </h4>
-        <p className="transition-colors duration-500">{project}</p>
+        <div className="flex">
+          <p className="transition-colors duration-500">{project}</p>
+          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
+            &nbsp;
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
+        </div>
       </div>
 
       <div className="mt-4">

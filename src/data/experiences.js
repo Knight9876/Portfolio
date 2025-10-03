@@ -6,6 +6,7 @@ const experience = [
     project: "MedSixty | AI-Powered Clinical Intelligence for Clinicians",
     location: "Tallinn",
     mode: "Remote",
+    websiteUrl: "https://www.medsixty.com",
     techStack: [
       {
         name: "React",
