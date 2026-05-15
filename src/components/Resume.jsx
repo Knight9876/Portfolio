@@ -10,49 +10,34 @@ const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Yash Kamble.pdf"; // Custom file name
+    link.download = "Yash Kamble.pdf";
     link.click();
   };
 
   const buttonRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
-    // Buttons animation with scale and pulse effect
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Button entry animation
     gsap.fromTo(
       buttonRef.current,
       {
-        scale: 0.9,
         opacity: 0,
-        y: 50,
-        willChange: "transform, opacity", // Hint for optimization
+        y: 20,
       },
       {
-        scale: 1,
         opacity: 1,
         y: 0,
-        duration: 0.3,
-        delay: 1,
-        ease: "power1.out",
-        stagger: 0.2,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: buttonRef.current, // Trigger animation when the button enters the viewport
-          start: "top 100%", // Adjust this value to control when the animation starts
-          toggleActions: "play reverse play reverse", // Repeat on scroll
+          trigger: buttonRef.current,
+          start: "top 95%",
+          toggleActions: "play none none reverse",
         },
       }
     );
-
-    // Adding interactive effect for buttons (scale and shadow on hover)
-    gsap.to(buttonRef.current, {
-      scale: 1.05,
-      duration: 0.3,
-      paused: true,
-      ease: "power1.inOut",
-      repeat: 3,
-      yoyo: true,
-    });
   }, []);
 
   return (
@@ -60,9 +45,9 @@ const Resume = () => {
       <button
         ref={buttonRef}
         onClick={handleDownload}
-        className="px-6 py-3 shadow-customPurpleBoxShadow bg-customPurple hover:bg-opacity-80 transition-all duration-300 rounded-lg font-bold text-lg cursor-pointer"
+        className="px-8 py-3 bg-primary-light text-white dark:bg-primary-dark dark:text-slate-900 transition-all duration-300 rounded-full font-bold text-lg cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1 active:scale-95 flex items-center gap-3"
       >
-        Resume &nbsp; <FontAwesomeIcon icon={faDownload} />
+        Download Resume <FontAwesomeIcon icon={faDownload} />
       </button>
     </section>
   );

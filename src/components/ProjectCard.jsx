@@ -1,24 +1,26 @@
 import React from "react";
 import Slider from "react-slick";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({ project, index, addToRefs, settings }) => (
   <div
     ref={addToRefs}
-    className={`project flex flex-col pt-8 mb-16 rounded-lg items-center shadow-customPurpleBoxShadow lg:flex-row md:flex-row md:gap-5 ${
+    className={`group flex flex-col mb-20 p-8 rounded-3xl bg-white dark:bg-slate-900 shadow-professional hover:shadow-professional-indigo transition-all duration-500 border border-slate-100 dark:border-slate-800 lg:flex-row md:flex-row gap-12 ${
       index % 2 !== 0 ? "lg:flex-row-reverse md:flex-row-reverse" : ""
-    } items-center mb-10`}
+    } items-center`}
   >
-    <div className="project-images mb-6 lg:w-1/4 md:w-1/2 w-full">
+    <div className="project-images lg:w-1/2 md:w-1/2 w-full overflow-hidden rounded-2xl shadow-lg">
       <Slider {...settings}>
         {project.img.map((image, i) => (
-          <div key={i}>
+          <div key={i} className="focus:outline-none">
             <img
               src={image}
               alt={`${project.title} - ${i}`}
               loading="lazy"
-              className={`w-full h-64 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110 ${
+              className={`w-full h-80 transition-transform duration-700 ease-in-out transform group-hover:scale-105 ${
                 project.title === "Cosmic Explorer"
-                  ? "object-contain"
+                  ? "object-contain bg-slate-50 dark:bg-slate-950"
                   : "object-cover"
               }`}
             />
@@ -27,55 +29,65 @@ const ProjectCard = ({ project, index, addToRefs, settings }) => (
       </Slider>
     </div>
     <div
-      className={`description  lg:w-3/4 md:w-1/2 w-full p-6 ${
+      className={`description lg:w-1/2 md:w-1/2 w-full ${
         index % 2 !== 0
-          ? "lg:text-end md:text-end"
-          : "lg:text-start md:text-start"
+          ? "lg:text-right md:text-right"
+          : "lg:text-left md:text-left"
       }`}
     >
-      <h3 className="text-2xl font-bold">{project.title}</h3>
-      <p className="text-justify mt-4">{project.description}</p>
-      <div className="mt-4 flex flex-col md:flex-row gap-4 items-center">
-        <strong>Technologies Used: </strong>
+      <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+        {project.title}
+      </h3>
+      <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-lg">
+        {project.description}
+      </p>
+      
+      <div className="mb-8">
+        <h4 className={`text-sm uppercase tracking-wider font-bold text-slate-400 dark:text-slate-500 mb-3 ${
+          index % 2 !== 0 ? "lg:text-right" : "lg:text-left"
+        }`}>
+          Technologies
+        </h4>
         <div
-          className={`flex flex-wrap gap-4 transition-colors duration-500 sm:justify-center ${
-            index % 2 !== 0 ? "lg:flex-row-reverse md:flex-row-reverse" : ""
+          className={`flex flex-wrap gap-2 ${
+            index % 2 !== 0 ? "lg:justify-end md:justify-end" : "lg:justify-start md:justify-start"
           }`}
         >
           {project.technologies.map((tech, index) => (
             <div
               key={index}
-              className={`flex w-max items-center gap-2 ${tech.color} ${tech.darkBgColor} ${tech.textColor} ${tech.darkTextColor} px-4 py-2 rounded-full`}
+              className={`flex items-center gap-1.5 ${tech.color} ${tech.darkBgColor} ${tech.textColor} ${tech.darkTextColor} px-3 py-1 rounded-md text-sm font-medium`}
             >
-              <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
+              {tech.logo && <img src={tech.logo} alt={tech.name} className="w-4 h-4" />}
               <span>{tech.name}</span>
             </div>
           ))}
         </div>
       </div>
-      <p className="mt-4">
+
+      <div className={`flex gap-6 items-center ${
+        index % 2 !== 0 ? "lg:justify-end md:justify-end" : "lg:justify-start md:justify-start"
+      }`}>
         {project.liveLink && (
-          <>
-            <a
-              href={project.liveLink}
-              className="text-blue-600 dark:text-blue-400"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Live Link
-            </a>
-            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          </>
+          <a
+            href={project.liveLink}
+            className="flex items-center gap-2 text-primary-light dark:text-primary-dark font-bold hover:underline transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Demo
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
+          </a>
         )}
         <a
           href={project.githubLink}
-          className="text-blue-600 dark:text-blue-400"
+          className="flex items-center gap-2 text-slate-600 dark:text-slate-400 font-bold hover:text-primary-light dark:hover:text-primary-dark transition-all"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub Repository
+          Source Code
         </a>
-      </p>
+      </div>
     </div>
   </div>
 );

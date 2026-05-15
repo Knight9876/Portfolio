@@ -15,70 +15,44 @@ const Internships = () => {
     gsap.fromTo(
       headerRef.current,
       {
-        x: -270, // Start from offscreen (left)
-        willChange: "transform", // Hint for optimization
+        opacity: 0,
+        x: -50,
       },
       {
-        x: 0, // End at original position
-        duration: 1,
-        ease: "power1.out",
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: headerRef.current, // Trigger animation when the header enters the viewport
-          start: "top 90%", // Adjust this value to control when the animation starts
-          toggleActions: "play reverse play reverse", // Repeat on scroll
+          trigger: headerRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
         },
       }
     );
 
-    // internship cards
-    cardsRef.current.forEach((card, index) => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
-          toggleActions: "play reverse play reverse",
-        },
-      });
-
-      tl.fromTo(
-        card,
+    // internship cards - staggered appearance
+    if (cardsRef.current.length > 0) {
+      gsap.fromTo(
+        cardsRef.current,
         {
           opacity: 0,
-          scale: 0.7,
-          rotateX: -45, // Adding more rotation for complexity
-          rotateY: 90,
-          z: 200, // Starting it further out
-          willChange: "transform, opacity", // Hint for optimization
+          y: 30,
         },
         {
           opacity: 1,
-          scale: 1.1, // Slightly overscale before settling to 1
-          rotateX: 0,
-          rotateY: 0,
-          z: 0,
-          duration: 1.5,
-          ease: "power1.out",
-          delay: index * 0.3,
+          y: 0,
+          duration: 0.1,
+          ease: "power2.out",
+          stagger: 0.2, // This makes cards appear one after another
+          scrollTrigger: {
+            trigger: cardsRef.current[0],
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
         }
-      )
-        .to(
-          card,
-          {
-            scale: 1, // Return to normal scale after overscale
-            duration: 0.3,
-            ease: "back.out(1.7)", // Adds a bounce-like effect
-          },
-          "-=0.3" // Overlap with the previous animation
-        )
-        .to(
-          card,
-          {
-            duration: 0.5,
-            ease: "power1.out",
-          },
-          "-=1" // Sync with the earlier part of the animation
-        );
-    });
+      );
+    }
   }, []);
 
   const addToRefs = (el) => {
@@ -90,15 +64,14 @@ const Internships = () => {
   return (
     <section
       id="internships"
-      className="pb-20 text-start dark:drop-shadow-customPurpleDropShadow"
+      className="py-20 text-start"
     >
-      <div className="flex flex-row items-center pb-8 -ml-1.5">
-        <div className="border-r-8 border-customPurple bg-white dark:bg-black rounded-lg pb-8 z-10">
-          &nbsp;
+      <div className="flex flex-row items-center mb-12">
+        <div className="w-2 h-10 bg-primary-light dark:bg-primary-dark rounded-full">
         </div>
         <h1
           ref={headerRef}
-          className="text-4xl font-bold text-start pl-8 z-0 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
+          className="text-4xl font-extrabold text-start pl-6 tracking-tight"
         >
           Internships
         </h1>
@@ -109,7 +82,7 @@ const Internships = () => {
             <InternshipCard
               key={index}
               internship={internship}
-              addToRefs={addToRefs} // Pass ref to track the card
+              addToRefs={addToRefs}
             />
           ))}
         </div>

@@ -17,54 +17,40 @@ const Projects = () => {
     gsap.fromTo(
       headerRef.current,
       {
-        x: -215, // Start from offscreen (left)
-        willChange: "transform", // Hint for optimization
+        opacity: 0,
+        x: -50,
       },
       {
-        x: 0, // End at original position
-        duration: 1,
-        ease: "power1.out",
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: headerRef.current, // Trigger animation when the header enters the viewport
-          start: "top 90%", // Adjust this value to control when the animation starts
-          toggleActions: "play reverse play reverse", // Repeat on scroll
+          trigger: headerRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
         },
       }
     );
 
-    // projects
+    // projects animation - slide from sides
     projectRefs.current.forEach((ref, index) => {
-      const rotationX = index % 2 === 0 ? 90 : -90; // Alternate rotation on X-axis
-
+      const isEven = index % 2 === 0;
       gsap.fromTo(
         ref,
         {
           opacity: 0,
-          y: 200, // Dramatic slide-up
-          scale: 0.7, // Initial zoom-out
-          rotationX, // Dynamic rotation X
-          rotationY: 30, // Dynamic rotation Y
-          willChange: "transform, opacity", // Hint for optimization
+          x: isEven ? -100 : 100,
         },
         {
           opacity: 1,
-          y: 0,
-          scale: 1,
-          rotationX: 0, // Reset the tilt
-          rotationY: 0,
-          duration: 3.5, // Slower animation duration
-          ease: "power1.out", // Smooth easing
-          stagger: {
-            amount: 2.5, // Increased stagger time
-            from: "center", // Animate from the center
-          },
+          x: 0,
+          duration: 0.1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: ref,
-            start: "top 100%", // Trigger even closer to entering viewport
-            end: "bottom 70%",
-            toggleActions: "play reverse play reverse", // Repeat on scroll
-            scrub: 1, // Smooth animation tied to scroll
-            markers: false, // Remove markers for production
+            start: "top 85%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -91,15 +77,14 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="projects-section pb-4 transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
+      className="projects-section py-20 transition-colors duration-500"
     >
-      <div className="flex flex-row items-center pb-8 -ml-1.5">
-        <div className="border-r-8 border-customPurple bg-white dark:bg-black rounded-lg pb-8 z-10">
-          &nbsp;
+      <div className="flex flex-row items-center mb-12">
+        <div className="w-2 h-10 bg-primary-light dark:bg-primary-dark rounded-full">
         </div>
         <h1
           ref={headerRef}
-          className="text-4xl font-bold text-start pl-8 z-0 dark:drop-shadow-customPurpleDropShadow"
+          className="text-4xl font-extrabold text-start pl-6 tracking-tight"
         >
           Projects
         </h1>

@@ -15,66 +15,65 @@ const Skills = () => {
     gsap.fromTo(
       headerRef.current,
       {
-        x: -150, // Start from offscreen (left)
-        willChange: "transform", // Hint for optimization
+        opacity: 0,
+        x: -50,
       },
       {
-        x: 0, // End at original position
-        duration: 1,
-        ease: "power1.out",
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: headerRef.current, // Trigger animation when the header enters the viewport
-          start: "top 90%", // Adjust this value to control when the animation starts
-          toggleActions: "play reverse play reverse", // Repeat on scroll
+          trigger: headerRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
         },
       }
     );
 
-    // skill known
+    // skill badges
     gsap.fromTo(
       skillRef.current,
       {
         opacity: 0,
-        y: 50, // Start from below
-        willChange: "transform, opacity", // Hint for optimization
+        y: 20,
       },
       {
         opacity: 1,
-        y: 0, // Move to original position
-        duration: 1.2, // Animation duration
-        ease: "power1.out",
-        stagger: 0.2, // Delay between each animation
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.05,
         scrollTrigger: {
-          trigger: skillRef.current[0], // Trigger animation when first element is in the viewport
-          start: "top 90%", // Start animation when element enters 90% of the viewport
-          toggleActions: "play reverse play reverse", // Repeat on scroll
+          trigger: skillRef.current[0],
+          start: "top 90%",
+          toggleActions: "play none none reverse",
         },
       }
     );
   }, []);
 
   return (
-    <section className="skills-section pb-20 dark:drop-shadow-customPurpleDropShadow">
-      <div className="flex flex-row items-center pb-8 -ml-1.5">
-        <div className="border-r-8 border-customPurple bg-white dark:bg-black rounded-lg pb-8 z-10">
-          &nbsp;
+    <section className="skills-section py-20">
+      <div className="flex flex-row items-center mb-12">
+        <div className="w-2 h-10 bg-primary-light dark:bg-primary-dark rounded-full">
         </div>
         <h1
           ref={headerRef}
-          className="text-4xl font-bold text-start pl-8 z-0 font-black transition-colors duration-500 dark:drop-shadow-customPurpleDropShadow"
+          className="text-4xl font-extrabold text-start pl-6 tracking-tight"
         >
           Skills
         </h1>
       </div>
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center gap-4 transition-colors duration-500">
+        <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => (
             <div
               key={index}
-              ref={(el) => (skillRef.current[index] = el)} // Store each ref
-              className={`flex items-center gap-2 ${skill.color} ${skill.darkBgColor} ${skill.textColor} ${skill.darkTextColor} px-4 py-2 rounded-full`}
+              ref={(el) => (skillRef.current[index] = el)}
+              className={`flex items-center gap-2 ${skill.color} ${skill.darkBgColor} ${skill.textColor} ${skill.darkTextColor} px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-shadow duration-300 font-medium`}
             >
-              <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+              <img src={skill.logo} alt={skill.name} className="w-5 h-5" />
               <span>{skill.name}</span>
             </div>
           ))}

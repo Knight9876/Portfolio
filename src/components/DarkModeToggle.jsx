@@ -6,65 +6,63 @@ import { gsap } from "gsap";
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(true);
   const sunRef = useRef(null);
+  const moonRef = useRef(null);
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      // Start the spinning animation
-      gsap.to(sunRef.current, {
-        rotation: 360,
-        duration: 10,
-        repeat: -1,
-        ease: "linear",
-      });
     } else {
       document.documentElement.classList.remove("dark");
-      // Stop the spinning animation
-      gsap.killTweensOf(sunRef.current);
     }
   }, [darkMode]);
 
   useEffect(() => {
+    // Very slow, professional rotation
+    gsap.to(sunRef.current, {
+      rotation: 360,
+      duration: 25,
+      repeat: -1,
+      ease: "linear",
+    });
+    gsap.to(moonRef.current, {
+      rotation: -360,
+      duration: 25,
+      repeat: -1,
+      ease: "linear",
+    });
+  }, []);
+
+  useEffect(() => {
     const handleKeyDown = (event) => {
-      if (
-        event.key === "d" ||
-        event.key === "D" ||
-        event.key === "l" ||
-        event.key === "L" ||
-        event.key === "n" ||
-        event.key === "N"
-      ) {
+      const key = event.key.toLowerCase();
+      if (key === "d" || key === "l" || key === "n") {
         setDarkMode((prevMode) => !prevMode);
-        console.log("done");
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
     <div className="mr-5">
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black transition-transform duration-300 transform hover:scale-110 dark:drop-shadow-customPurpleDropShadow dark:shadow-customPurpleBoxShadow dark:border-white"
+        className="group relative flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+        aria-label="Toggle Dark Mode"
       >
-        {/* Moon Icon */}
-        <FontAwesomeIcon
-          icon={faMoon}
-          className={`text-xl ${
-            darkMode ? "hidden" : "block"
-          } transition-transform duration-500`}
-        />
-        {/* Sun Icon */}
-        <FontAwesomeIcon
-          icon={faSun}
-          className={`text-xl ${darkMode ? "block" : "hidden"} absolute`}
+        <div 
           ref={sunRef}
-        />
+          className={`transition-all duration-500 transform ${darkMode ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+        >
+           <FontAwesomeIcon icon={faSun} className="text-amber-400 text-lg" />
+        </div>
+        <div 
+          ref={moonRef}
+          className={`absolute transition-all duration-500 transform ${!darkMode ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+        >
+           <FontAwesomeIcon icon={faMoon} className="text-slate-700 dark:text-slate-300 text-lg" />
+        </div>
       </button>
     </div>
   );
