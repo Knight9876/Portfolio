@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import DarkModeToggle from "./DarkModeToggle";
+import config from "../../config";
+import DarkModeToggle from "../ui/DarkModeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Handle menu toggle
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -16,7 +16,7 @@ const Header = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 0); // Adjust the delay if needed
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,7 +35,7 @@ const Header = () => {
             duration={1000}
             className="cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors"
           >
-            Yash Kamble
+            {config.profile.name}
           </Link>
         </div>
 
@@ -52,43 +52,22 @@ const Header = () => {
             isMenuOpen ? "translate-x-0" : "translate-x-full sm:translate-x-0"
           }`}
         >
-          <li className="p-2 sm:py-0 sm:border-none">
-            <Link
-              to="experiences"
-              smooth={true}
-              duration={1000}
-              className="cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Experience
-            </Link>
-          </li>
-          <li className="p-2 sm:py-0 sm:border-none">
-            <Link
-              to="projects"
-              smooth={true}
-              duration={1000}
-              className="cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects
-            </Link>
-          </li>
-          <li className="p-2 sm:py-0">
-            <Link
-              to="contact"
-              smooth={true}
-              duration={1000}
-              className="cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
+          {config.navigation.map((item) => (
+            <li key={item.to} className="p-2 sm:py-0 sm:border-none">
+              <Link
+                to={item.to}
+                smooth={true}
+                duration={1000}
+                className="cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      {/* Dark Mode Toggle */}
       <DarkModeToggle />
     </header>
   );

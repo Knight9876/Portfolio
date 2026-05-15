@@ -3,14 +3,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-
-import resume from "../assets/resume.pdf";
+import resume from "../../assets/resume.pdf";
+import config from "../../config";
 
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Yash Kamble.pdf";
+    link.download = `${config.profile.name}.pdf`;
     link.click();
   };
 
@@ -19,13 +19,9 @@ const Resume = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Button entry animation
     gsap.fromTo(
       buttonRef.current,
-      {
-        opacity: 0,
-        y: 20,
-      },
+      { opacity: 0, y: 20 },
       {
         opacity: 1,
         y: 0,

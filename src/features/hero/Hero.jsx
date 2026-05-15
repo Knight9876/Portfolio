@@ -3,9 +3,9 @@ import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
+import config from "../../config";
 
 const Hero = () => {
-  const heroRef = useRef(null);
   const photoRef = useRef(null);
   const textRef = useRef(null);
 
@@ -15,44 +15,21 @@ const Hero = () => {
     // Profile photo animation - subtle fade and scale
     tl.fromTo(
       photoRef.current,
-      {
-        opacity: 0,
-        scale: 0.9,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-      }
+      { opacity: 0, scale: 0.9, y: 20 },
+      { opacity: 1, scale: 1, y: 0, duration: 1, ease: "power2.out" }
     );
 
     // Text animation - simple fade and slide up
     tl.fromTo(
       textRef.current.children,
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.1,
-      },
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", stagger: 0.1 },
       "-=0.6"
     );
   }, []);
 
   return (
-    <div
-      ref={heroRef}
-      id="hero"
-      className="hero min-h-screen flex items-center justify-center"
-    >
+    <div id="hero" className="hero min-h-screen flex items-center justify-center pt-20">
       <div className="text-center flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32 px-4">
         {/* Profile Photo */}
         <div
@@ -61,8 +38,8 @@ const Hero = () => {
         >
           <img
             className="rounded-full object-cover aspect-[1/1] w-full max-w-[15rem] sm:max-w-[16rem] md:max-w-[16rem] lg:max-w-[20rem]"
-            src="https://res.cloudinary.com/dlnvozmgw/image/upload/v1759424006/Profile_Pic_eg67az.jpg"
-            alt="Yash Kamble - Profile"
+            src={config.profile.profilePic}
+            alt={`${config.profile.name} - Profile`}
             loading="lazy"
           />
         </div>
@@ -70,10 +47,10 @@ const Hero = () => {
         {/* About Text */}
         <div ref={textRef} className="flex flex-col gap-4 text-left md:text-left">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight transition-colors duration-500">
-            Yash Kamble
+            {config.profile.name}
           </h1>
           <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 font-medium transition-colors duration-500">
-            Aspiring Frontend Developer
+            {config.profile.role}
           </p>
 
           {/* Buttons */}

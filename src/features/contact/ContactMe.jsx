@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import socialLinks from "../data/socialLinks";
-
+import socialLinks from "../../data/socialLinks";
+import config from "../../config";
+import SectionHeader from "../../components/ui/SectionHeader";
 import Resume from "./Resume";
 
 const Contact = () => {
-  const headerRef = useRef(null);
   const emailRef = useRef(null);
   const socialRefs = useRef([]);
   const paragraphRef = useRef(null);
@@ -15,26 +15,6 @@ const Contact = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    // Header animation
-    gsap.fromTo(
-      headerRef.current,
-      {
-        opacity: 0,
-        x: -50,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
 
     // Content fade in
     gsap.fromTo(
@@ -58,10 +38,7 @@ const Contact = () => {
     socialRefs.current.forEach((ref, index) => {
       gsap.fromTo(
         ref,
-        {
-          opacity: 0,
-          scale: 0.8,
-        },
+        { opacity: 0, scale: 0.8 },
         {
           opacity: 1,
           scale: 1,
@@ -79,34 +56,19 @@ const Contact = () => {
   }, []);
 
   return (
-    <section
-      id="contact"
-      className="py-24 text-center"
-    >
-      <div className="flex flex-row items-center mb-12">
-        <div className="w-2 h-10 bg-primary-light dark:bg-primary-dark rounded-full">
-        </div>
-        <h1
-          ref={headerRef}
-          className="text-4xl font-extrabold text-start pl-6 tracking-tight"
-        >
-          Contact Me
-        </h1>
-      </div>
+    <section id="contact" className="py-24 text-center">
+      <SectionHeader title="Contact Me" />
       <div className="container mx-auto px-4 max-w-2xl">
-        <p
-          ref={paragraphRef}
-          className="text-xl text-slate-600 dark:text-slate-400 mb-8"
-        >
+        <p ref={paragraphRef} className="text-xl text-slate-600 dark:text-slate-400 mb-8">
           Have a project in mind or just want to say hi? I'd love to hear from you!
         </p>
 
         <div ref={emailRef} className="mb-12">
           <a
-            href="mailto:yashkamble824@gmail.com"
+            href={`mailto:${config.profile.email}`}
             className="text-3xl md:text-4xl font-bold text-primary-light dark:text-primary-dark hover:underline transition-all break-words"
           >
-            yashkamble824@gmail.com
+            {config.profile.email}
           </a>
         </div>
 

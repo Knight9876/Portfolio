@@ -1,8 +1,8 @@
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { forwardRef } from "react";
 
-const ExperienceCard = ({ experience, addToRefs }) => {
+const ExperienceCard = forwardRef(({ experience }, ref) => {
   const {
     company,
     duration,
@@ -17,7 +17,7 @@ const ExperienceCard = ({ experience, addToRefs }) => {
 
   return (
     <div
-      ref={addToRefs}
+      ref={ref}
       className="p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-professional hover:shadow-professional-indigo transition-all duration-300 border border-slate-100 dark:border-slate-800"
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
@@ -77,6 +77,6 @@ const ExperienceCard = ({ experience, addToRefs }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ExperienceCard;

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const InternshipCard = ({ internship, addToRefs }) => {
+const InternshipCard = forwardRef(({ internship }, ref) => {
   return (
     <div
-      ref={addToRefs}
+      ref={ref}
       className="p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-professional hover:shadow-professional-indigo transition-all duration-300 border border-slate-100 dark:border-slate-800 flex flex-col h-full"
     >
       <div className="mb-6">
@@ -53,6 +53,6 @@ const InternshipCard = ({ internship, addToRefs }) => {
       </div>
     </div>
   );
-};
+});
 
 export default InternshipCard;
