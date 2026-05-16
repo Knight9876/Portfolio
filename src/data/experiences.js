@@ -22,13 +22,15 @@ const experience = [
 
       "Integrated APIs for authentication, notifications, real-time trading data, and core business workflows.",
 
-      "Implemented an Authorized Delivery workflow   customers to approve or reject delivery verification requests before dispatch.",
+      "Implemented an Authorized Delivery workflow customers to approve or reject delivery verification requests before dispatch.",
 
       "Improved socket reliability by implementing a heartbeat-based ping/pong reconnection mechanism for stale connections.",
 
       "Resolved frontend issues involving duplicate notifications, API inconsistencies, state persistence, and cross-platform UI rendering.",
 
       "Collaborated with backend developers to refine APIs and improve real-time data synchronization.",
+
+      "Worked on a jewellery ecommerce platform with admin panel, catalog management, and customer mobile application workflows.",
     ],
   },
 
