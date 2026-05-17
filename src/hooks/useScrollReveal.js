@@ -20,7 +20,12 @@ const useScrollReveal = (ref, {
   useEffect(() => {
     if (!ref.current) return;
 
-    const animation = gsap.fromTo(ref.current, from, {
+    // Determine if we should animate children (stagger) or the ref itself
+    const target = (to.stagger && ref.current.children.length > 0) 
+      ? ref.current.children 
+      : ref.current;
+
+    const animation = gsap.fromTo(target, from, {
       ...to,
       scrollTrigger: {
         trigger: ref.current,
