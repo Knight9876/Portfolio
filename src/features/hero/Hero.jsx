@@ -46,7 +46,7 @@ const Hero = () => {
 
         {/* About Text */}
         <div ref={textRef} className="flex flex-col gap-4 text-left md:text-left">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight transition-colors duration-500">
+          <h1 className="text-5xl text-center md:text-6xl lg:text-7xl font-extrabold tracking-tight transition-colors duration-500">
             {config.profile.name}
           </h1>
           <p className="text-xl text-center sm:text-2xl text-slate-600 dark:text-slate-400 font-medium transition-colors duration-500">
