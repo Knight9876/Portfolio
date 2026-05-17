@@ -3,7 +3,7 @@ import { SKILLS } from "./skills";
 const experience = [
   {
     company: "Goldjar Technologies Private Limited",
-    duration: "Oct 2025 - Present",
+    duration: "Nov 2025 - Present",
     role: "Frontend Developer",
     project: "Bullion Trading Platform (Web, Admin Panel & Mobile Applications)",
     location: "Mumbai",

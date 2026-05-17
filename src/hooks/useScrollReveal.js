@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
  */
 const useScrollReveal = (ref, { 
   from = { opacity: 0, y: 30 }, 
-  to = { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 
+  to = { opacity: 1, y: 0, duration: 0.8, ease: "power1.out" }, 
   scrollTriggerOptions = {} 
 } = {}) => {
   useEffect(() => {

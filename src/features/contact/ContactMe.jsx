@@ -26,9 +26,9 @@ const Contact = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.3,
         stagger: 0.1,
-        ease: "power2.out",
+        ease: "power1.out",
         scrollTrigger: {
           trigger: paragraphRef.current,
           start: "top 90%",
@@ -45,7 +45,7 @@ const Contact = () => {
         {
           opacity: 1,
           scale: 1,
-          duration: 0.5,
+          duration: 0.3,
           delay: index * 0.1,
           ease: "back.out(1.7)",
           scrollTrigger: {
@@ -68,7 +68,7 @@ const Contact = () => {
 
         <div ref={emailRef} className="mb-12">
           <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${config.profile.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${config.profile.email}&su=Frontend%20Engineer%20Opportunity%20for%20Yash%20Kamble`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl md:text-4xl font-bold text-primary-light dark:text-primary-dark hover:underline transition-all break-words"

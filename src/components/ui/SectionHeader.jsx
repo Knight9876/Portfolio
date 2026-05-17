@@ -6,7 +6,7 @@ const SectionHeader = ({ title }) => {
   
   useScrollReveal(headerRef, {
     from: { opacity: 0, x: -50 },
-    to: { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" }
+    to: { opacity: 1, x: 0, duration: 0.8, ease: "power1.out" }
   });
 
   return (

@@ -20,7 +20,7 @@ const AboutMe = () => {
   // To stick to the "one after another" or "professional fade", let's use the container for now.
   useScrollReveal(aboutRef, {
     from: { opacity: 0, y: 20 },
-    to: { opacity: 1, y: 0, duration: 1, ease: "power2.out", stagger: 0.2 }
+    to: { opacity: 1, y: 0, duration: 1, ease: "power1.out", stagger: 0.2 }
   });
 
   return (

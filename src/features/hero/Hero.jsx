@@ -16,14 +16,14 @@ const Hero = () => {
     tl.fromTo(
       photoRef.current,
       { opacity: 0, scale: 0.9, y: 20 },
-      { opacity: 1, scale: 1, y: 0, duration: 1, ease: "power2.out" }
+      { opacity: 1, scale: 1, y: 0, duration: 1, ease: "power1.out" }
     );
 
     // Text animation - simple fade and slide up
     tl.fromTo(
       textRef.current.children,
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", stagger: 0.1 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power1.out", stagger: 0.1 },
       "-=0.6"
     );
   }, []);
@@ -49,17 +49,17 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight transition-colors duration-500">
             {config.profile.name}
           </h1>
-          <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 font-medium transition-colors duration-500">
+          <p className="text-xl text-center sm:text-2xl text-slate-600 dark:text-slate-400 font-medium transition-colors duration-500">
             {config.profile.role}
           </p>
 
           {/* Buttons */}
-          <div className="flex justify-center md:justify-start gap-4 mt-6">
+          <div className="flex justify-center md:justify-start gap-4 mt-4">
             <Link
               to="experiences"
               smooth={true}
               duration={500}
-              className="px-8 py-3 bg-primary-light text-white hover:bg-indigo-700 dark:bg-primary-dark dark:text-slate-900 dark:hover:bg-indigo-300 transition-all duration-300 rounded-full font-bold text-lg cursor-pointer shadow-md hover:shadow-lg"
+              className="px-8 py-3.5 bg-primary-light text-white hover:bg-indigo-700 dark:bg-primary-dark dark:text-slate-900 dark:hover:bg-indigo-300 transition-all duration-300 rounded-full font-bold text-lg cursor-pointer shadow-md hover:shadow-lg"
             >
               Experience &nbsp; <FontAwesomeIcon icon={faArrowRight} />
             </Link>
