@@ -1,5 +1,5 @@
-const skills = [
-  {
+export const SKILLS = {
+  REACT: {
     name: "React",
     color: "bg-yellow-200",
     textColor: "text-yellow-800",
@@ -7,7 +7,15 @@ const skills = [
     darkTextColor: "dark:text-yellow-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
   },
-  {
+  NEXTJS: {
+    name: "Next.js",
+    color: "bg-zinc-200",
+    textColor: "text-zinc-800",
+    darkBgColor: "dark:bg-zinc-700",
+    darkTextColor: "dark:text-zinc-100",
+    logo: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
+  },
+  REACT_NATIVE: {
     name: "React Native",
     color: "bg-pink-300",
     textColor: "text-pink-900",
@@ -15,7 +23,7 @@ const skills = [
     darkTextColor: "dark:text-pink-100",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
   },
-  {
+  TYPESCRIPT: {
     name: "TypeScript",
     color: "bg-sky-300",
     textColor: "text-sky-900",
@@ -23,23 +31,7 @@ const skills = [
     darkTextColor: "dark:text-sky-100",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687325/logo/typescript_bcsmhg.png",
   },
-  {
-    name: "Expo",
-    color: "bg-violet-300",
-    textColor: "text-violet-900",
-    darkBgColor: "dark:bg-violet-700",
-    darkTextColor: "dark:text-violet-100",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425811/expo_hhahle.png",
-  },
-  {
-    name: "Electron",
-    color: "bg-lime-300",
-    textColor: "text-lime-900",
-    darkBgColor: "dark:bg-lime-700",
-    darkTextColor: "dark:text-lime-100",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425247/Electron_u0yqch.webp",
-  },
-  {
+  JAVASCRIPT: {
     name: "JavaScript",
     color: "bg-blue-200",
     textColor: "text-blue-800",
@@ -47,15 +39,7 @@ const skills = [
     darkTextColor: "dark:text-blue-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791971/logo/javascript_tlgwab.png",
   },
-  {
-    name: "Styled Components",
-    color: "bg-fuchsia-300",
-    textColor: "text-fuchsia-900",
-    darkBgColor: "dark:bg-fuchsia-700",
-    darkTextColor: "dark:text-fuchsia-100",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687529/logo/styled_components_fvhdp0.png",
-  },
-  {
+  TAILWIND: {
     name: "Tailwind CSS",
     color: "bg-purple-200",
     textColor: "text-purple-800",
@@ -63,40 +47,31 @@ const skills = [
     darkTextColor: "dark:text-purple-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791985/logo/tailwind_b80pwy.png",
   },
-  {
-    name: "Bootstrap",
-    color: "bg-pink-200",
-    textColor: "text-pink-800",
-    darkBgColor: "dark:bg-pink-600",
-    darkTextColor: "dark:text-pink-200",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
+  SHADCN: {
+    name: "ShadCN UI",
+    color: "bg-slate-200",
+    textColor: "text-slate-800",
+    darkBgColor: "dark:bg-slate-700",
+    darkTextColor: "dark:text-slate-100",
+    logo: "https://ui.shadcn.com/apple-touch-icon.png",
   },
-  {
-    name: "SCSS",
-    color: "bg-cyan-200",
-    textColor: "text-cyan-900",
-    darkBgColor: "dark:bg-cyan-700",
-    darkTextColor: "dark:text-cyan-100",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430864/sass_ysjzyl.webp",
+  STYLED_COMPONENTS: {
+    name: "Styled Components",
+    color: "bg-fuchsia-300",
+    textColor: "text-fuchsia-900",
+    darkBgColor: "dark:bg-fuchsia-700",
+    darkTextColor: "dark:text-fuchsia-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687529/logo/styled_components_fvhdp0.png",
   },
-
-  {
-    name: "GSAP",
-    color: "bg-red-200",
-    textColor: "text-red-800",
-    darkBgColor: "dark:bg-red-600",
-    darkTextColor: "dark:text-red-200",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791965/logo/gsap_vodqc1.png",
+  EXPO: {
+    name: "Expo",
+    color: "bg-violet-300",
+    textColor: "text-violet-900",
+    darkBgColor: "dark:bg-violet-700",
+    darkTextColor: "dark:text-violet-100",
+    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425811/expo_hhahle.png",
   },
-  {
-    name: "Three.js",
-    color: "bg-lime-200",
-    textColor: "text-lime-800",
-    darkBgColor: "dark:bg-lime-600",
-    darkTextColor: "dark:text-lime-200",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753690755/logo/three_js_jddexf.png",
-  },
-  {
+  HTML5: {
     name: "HTML5",
     color: "bg-green-200",
     textColor: "text-green-800",
@@ -104,7 +79,7 @@ const skills = [
     darkTextColor: "dark:text-green-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791975/logo/html_pe402c.png",
   },
-  {
+  CSS3: {
     name: "CSS3",
     color: "bg-gray-200",
     textColor: "text-gray-800",
@@ -112,7 +87,7 @@ const skills = [
     darkTextColor: "dark:text-gray-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/css_ldx5n5.png",
   },
-  {
+  GIT: {
     name: "Git & GitHub",
     color: "bg-teal-200",
     textColor: "text-teal-800",
@@ -120,14 +95,8 @@ const skills = [
     darkTextColor: "dark:text-teal-200",
     logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/git_iu7vmu.png",
   },
-  {
-    name: "Cloudinary",
-    color: "bg-orange-200",
-    textColor: "text-orange-800",
-    darkBgColor: "dark:bg-orange-600",
-    darkTextColor: "dark:text-orange-200",
-    logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791960/logo/cloudinary_zkhadh.png",
-  },
-];
+};
+
+const skills = Object.values(SKILLS);
 
 export default skills;

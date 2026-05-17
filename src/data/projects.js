@@ -1,25 +1,13 @@
+import { SKILLS } from "./skills";
+
 const projects = [
   {
     title: "ByteBazaar",
     description:
       "A cutting-edge eCommerce platform for tech enthusiasts, ByteBazaar offers a curated selection of the latest gadgets, from smartphones to gaming gear. With an intuitive interface, dynamic filtering, and seamless navigation, ByteBazaar delivers a futuristic shopping experience tailored for every tech lover.",
     technologies: [
-      {
-        name: "React",
-        color: "bg-yellow-200",
-        textColor: "text-yellow-800",
-        darkBgColor: "dark:bg-yellow-600",
-        darkTextColor: "dark:text-yellow-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "bg-purple-200",
-        textColor: "text-purple-800",
-        darkBgColor: "dark:bg-purple-600",
-        darkTextColor: "dark:text-purple-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791985/logo/tailwind_b80pwy.png",
-      },
+      SKILLS.REACT,
+      SKILLS.TAILWIND,
       {
         name: "Cloudinary",
         color: "bg-orange-200",
@@ -66,68 +54,29 @@ const projects = [
       "https://res.cloudinary.com/dlnvozmgw/image/upload/v1741703856/bytebazaar/bytebazaar_33_xcrtlu.png",
     ],
   },
-  {
-    title: "Cosmic Explorer",
-    description:
-      "Cosmic Explorer is a mobile app built with React Native and Expo that lets users explore planets, moons, asteroids, and more in our solar system. Featuring a custom space-themed UI, immersive dark mode, detailed celestial info, and scheduled push notifications, it offers an engaging experience for space enthusiasts and learners.",
-    technologies: [
-      {
-        name: "React Native",
-        color: "bg-pink-300",
-        textColor: "text-pink-900",
-        darkBgColor: "dark:bg-pink-700",
-        darkTextColor: "dark:text-pink-100",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "TypeScript",
-        color: "bg-sky-300",
-        textColor: "text-sky-900",
-        darkBgColor: "dark:bg-sky-700",
-        darkTextColor: "dark:text-sky-100",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687325/logo/typescript_bcsmhg.png",
-      },
-      {
-        name: "Expo",
-        color: "bg-violet-300",
-        textColor: "text-violet-900",
-        darkBgColor: "dark:bg-violet-700",
-        darkTextColor: "dark:text-violet-100",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425811/expo_hhahle.png",
-      },
-    ],
-    githubLink: "https://github.com/Knight9876/Cosmic-Explorer",
-    img: [
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427229/cosmic_1_xovhsg.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427229/cosmic_2_dpyjmh.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_3_jrdi3f.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_4_silr24.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_5_ldncfw.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_6_fixak1.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_7_db5fsv.png",
-    ],
-  },
+  // {
+  //   title: "Cosmic Explorer",
+  //   description:
+  //     "Cosmic Explorer is a mobile app built with React Native and Expo that lets users explore planets, moons, asteroids, and more in our solar system. Featuring a custom space-themed UI, immersive dark mode, detailed celestial info, and scheduled push notifications, it offers an engaging experience for space enthusiasts and learners.",
+  //   technologies: [SKILLS.REACT_NATIVE, SKILLS.TYPESCRIPT, SKILLS.EXPO],
+  //   githubLink: "https://github.com/Knight9876/Cosmic-Explorer",
+  //   img: [
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427229/cosmic_1_xovhsg.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427229/cosmic_2_dpyjmh.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_3_jrdi3f.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_4_silr24.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_5_ldncfw.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_6_fixak1.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759427230/cosmic_7_db5fsv.png",
+  //   ],
+  // },
   {
     title: "🎧 SongBeatz",
     description:
       "SongBeatz is a desktop music player built with Electron and React. It lets users play, pause, seek, and navigate tracks, create and manage playlists, mark favorites, and enjoy album art—all in a sleek dark mode interface designed for seamless music listening.",
     technologies: [
-      {
-        name: "React",
-        color: "bg-yellow-200",
-        textColor: "text-yellow-800",
-        darkBgColor: "dark:bg-yellow-600",
-        darkTextColor: "dark:text-yellow-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "TypeScript",
-        color: "bg-sky-300",
-        textColor: "text-sky-900",
-        darkBgColor: "dark:bg-sky-700",
-        darkTextColor: "dark:text-sky-100",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1753687325/logo/typescript_bcsmhg.png",
-      },
+      SKILLS.REACT,
+      SKILLS.TYPESCRIPT,
       {
         name: "Electron",
         color: "bg-lime-300",
@@ -137,7 +86,7 @@ const projects = [
         logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759425247/Electron_u0yqch.webp",
       },
     ],
-    githubLink: "https://github.com/Knight9876/SongBeatz",
+    // githubLink: "https://github.com/Knight9876/SongBeatz",
     img: [
       "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759428765/songbeatz_1_cxteqn.png",
       "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759428765/songbeatz_2_ntmvgp.png",
@@ -147,146 +96,90 @@ const projects = [
       "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759428766/songbeatz_6_uumsc5.png",
     ],
   },
-  {
-    title: "A Not-So Spotify Clone",
-    description:
-      "A Not-So Spotify Clone is a web-based music player built with React, SCSS, and Bootstrap. Users can play, pause, seek, skip tracks, view top tracks, manage favorites, and track recently played songs. The interface features dark mode and dynamically changes the background color to match the current album art, creating an immersive listening experience.",
-    technologies: [
-      {
-        name: "React",
-        color: "bg-yellow-200",
-        textColor: "text-yellow-800",
-        darkBgColor: "dark:bg-yellow-600",
-        darkTextColor: "dark:text-yellow-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "Bootstrap",
-        color: "bg-pink-200",
-        textColor: "text-pink-800",
-        darkBgColor: "dark:bg-pink-600",
-        darkTextColor: "dark:text-pink-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
-      },
-      {
-        name: "SCSS",
-        color: "bg-cyan-200",
-        textColor: "text-cyan-900",
-        darkBgColor: "dark:bg-cyan-700",
-        darkTextColor: "dark:text-cyan-100",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430864/sass_ysjzyl.webp",
-      },
-    ],
-    liveLink: "https://a-not-so-spotify-clone.netlify.app",
-    githubLink: "https://github.com/Knight9876/a-not-so-spotify-clone",
-    img: [
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_1_kfsika.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430078/spotify_2_nlgdgr.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_3_izxxzy.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_4_uqes63.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_5_wnmazn.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430075/spotify_6_zl5gku.png",
-    ],
-  },
-  {
-    title: "Journey to Become the Ultimate Pokémon Master",
-    description:
-      "An immersive website that chronicles Ash Ketchum's journey from Pallet Town to becoming a Pokémon World Champion, highlighting key battles, Pokémon companions, and milestones, with dynamic, interactive elements to relive his adventure.",
-    technologies: [
-      {
-        name: "React",
-        color: "bg-yellow-200",
-        textColor: "text-yellow-800",
-        darkBgColor: "dark:bg-yellow-600",
-        darkTextColor: "dark:text-yellow-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "Bootstrap",
-        color: "bg-pink-200",
-        textColor: "text-pink-800",
-        darkBgColor: "dark:bg-pink-600",
-        darkTextColor: "dark:text-pink-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
-      },
-      {
-        name: "Cloudinary",
-        color: "bg-orange-200",
-        textColor: "text-orange-800",
-        darkBgColor: "dark:bg-orange-600",
-        darkTextColor: "dark:text-orange-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791960/logo/cloudinary_zkhadh.png",
-      },
-    ],
-    liveLink: "https://ashjourney.netlify.app",
-    githubLink: "https://github.com/Knight9876/Ash-s-Pokemon-Journey",
-    img: [
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792001/ash_journey/ash_journey_1_lootda.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791960/ash_journey/ash_journey_2_sjaih4.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792031/ash_journey/ash_journey_3_mgozm5.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792024/ash_journey/ash_journey_4_pqffjq.png",
-    ],
-  },
-  {
-    title: "Quordle",
-    description:
-      "A web-based game that challenges users to solve four Wordle puzzles simultaneously. With a clean UI and engaging gameplay, Quordle tests players' linguistic skills across multiple boards, adding a new layer of complexity to the classic Wordle experience.",
-    technologies: [
-      {
-        name: "React",
-        color: "bg-yellow-200",
-        textColor: "text-yellow-800",
-        darkBgColor: "dark:bg-yellow-600",
-        darkTextColor: "dark:text-yellow-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791993/logo/react_sg628z.png",
-      },
-      {
-        name: "CSS3",
-        color: "bg-gray-200",
-        textColor: "text-gray-800",
-        darkBgColor: "dark:bg-gray-600",
-        darkTextColor: "dark:text-gray-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/css_ldx5n5.png",
-      },
-    ],
-    liveLink: "https://quordlequest.netlify.app",
-    githubLink: "https://github.com/Knight9876/Quordle",
-    img: [
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792205/quordle/quordle_1_btzvgf.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792206/quordle/quordle_2_t8cehc.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792206/quordle/quordle_3_o5fafg.png",
-    ],
-  },
+  // {
+  //   title: "A Not-So Spotify Clone",
+  //   description:
+  //     "A Not-So Spotify Clone is a web-based music player built with React, SCSS, and Bootstrap. Users can play, pause, seek, skip tracks, view top tracks, manage favorites, and track recently played songs. The interface features dark mode and dynamically changes the background color to match the current album art, creating an immersive listening experience.",
+  //   technologies: [
+  //     SKILLS.REACT,
+  //     {
+  //       name: "Bootstrap",
+  //       color: "bg-pink-200",
+  //       textColor: "text-pink-800",
+  //       darkBgColor: "dark:bg-pink-600",
+  //       darkTextColor: "dark:text-pink-200",
+  //       logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
+  //     },
+  //     {
+  //       name: "SCSS",
+  //       color: "bg-cyan-200",
+  //       textColor: "text-cyan-900",
+  //       darkBgColor: "dark:bg-cyan-700",
+  //       darkTextColor: "dark:text-cyan-100",
+  //       logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430864/sass_ysjzyl.webp",
+  //     },
+  //   ],
+  //   liveLink: "https://a-not-so-spotify-clone.netlify.app",
+  //   githubLink: "https://github.com/Knight9876/a-not-so-spotify-clone",
+  //   img: [
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_1_kfsika.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430078/spotify_2_nlgdgr.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_3_izxxzy.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_4_uqes63.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430076/spotify_5_wnmazn.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1759430075/spotify_6_zl5gku.png",
+  //   ],
+  // },
+  // {
+  //   title: "Journey to Become the Ultimate Pokémon Master",
+  //   description:
+  //     "An immersive website that chronicles Ash Ketchum's journey from Pallet Town to becoming a Pokémon World Champion, highlighting key battles, Pokémon companions, and milestones, with dynamic, interactive elements to relive his adventure.",
+  //   technologies: [
+  //     SKILLS.REACT,
+  //     {
+  //       name: "Bootstrap",
+  //       color: "bg-pink-200",
+  //       textColor: "text-pink-800",
+  //       darkBgColor: "dark:bg-pink-600",
+  //       darkTextColor: "dark:text-pink-200",
+  //       logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791947/logo/bootstrap_vstpde.png",
+  //     },
+  //     {
+  //       name: "Cloudinary",
+  //       color: "bg-orange-200",
+  //       textColor: "text-orange-800",
+  //       darkBgColor: "dark:bg-orange-600",
+  //       darkTextColor: "dark:text-orange-200",
+  //       logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791960/logo/cloudinary_zkhadh.png",
+  //     },
+  //   ],
+  //   liveLink: "https://ashjourney.netlify.app",
+  //   githubLink: "https://github.com/Knight9876/Ash-s-Pokemon-Journey",
+  //   img: [
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792001/ash_journey/ash_journey_1_lootda.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791960/ash_journey/ash_journey_2_sjaih4.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792031/ash_journey/ash_journey_3_mgozm5.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792024/ash_journey/ash_journey_4_pqffjq.png",
+  //   ],
+  // },
+  // {
+  //   title: "Quordle",
+  //   description:
+  //     "A web-based game that challenges users to solve four Wordle puzzles simultaneously. With a clean UI and engaging gameplay, Quordle tests players' linguistic skills across multiple boards, adding a new layer of complexity to the classic Wordle experience.",
+  //   technologies: [SKILLS.REACT, SKILLS.CSS3],
+  //   liveLink: "https://quordlequest.netlify.app",
+  //   githubLink: "https://github.com/Knight9876/Quordle",
+  //   img: [
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792205/quordle/quordle_1_btzvgf.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792206/quordle/quordle_2_t8cehc.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792206/quordle/quordle_3_o5fafg.png",
+  //   ],
+  // },
   {
     title: "PokéPedia",
     description:
       "PokéPedia is a comprehensive Pokedex website where users can access detailed information about all Pokemon from generations 1 to 9, including their various forms. The website features a user-friendly interface with multiple functionalities to enhance your Pokemon experience.",
-    technologies: [
-      {
-        name: "JavaScript",
-        color: "bg-blue-200",
-        textColor: "text-blue-800",
-        darkBgColor: "dark:bg-blue-600",
-        darkTextColor: "dark:text-blue-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791971/logo/javascript_tlgwab.png",
-      },
-      {
-        name: "HTML5",
-        color: "bg-green-200",
-        textColor: "text-green-800",
-        darkBgColor: "dark:bg-green-600",
-        darkTextColor: "dark:text-green-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791975/logo/html_pe402c.png",
-      },
-      {
-        name: "CSS3",
-        color: "bg-gray-200",
-        textColor: "text-gray-800",
-        darkBgColor: "dark:bg-gray-600",
-        darkTextColor: "dark:text-gray-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/css_ldx5n5.png",
-      },
-    ],
+    technologies: [SKILLS.JAVASCRIPT, SKILLS.HTML5, SKILLS.CSS3],
     liveLink: "https://pediapokepedia.netlify.app",
     githubLink: "https://github.com/Knight9876/PokePedia",
     img: [
@@ -311,50 +204,25 @@ const projects = [
       "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792161/pokepedia/pokepedia_19_evi71c.png",
     ],
   },
-  {
-    title: "NoobsCode",
-    description:
-      "NoobsCode is an innovative gaming website designed to make learning how to code an enjoyable and interactive experience. With its user-friendly interface and engaging gameplay, users can enhance their coding skills while having fun.",
-    technologies: [
-      {
-        name: "JavaScript",
-        color: "bg-blue-200",
-        textColor: "text-blue-800",
-        darkBgColor: "dark:bg-blue-600",
-        darkTextColor: "dark:text-blue-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791971/logo/javascript_tlgwab.png",
-      },
-      {
-        name: "HTML5",
-        color: "bg-green-200",
-        textColor: "text-green-800",
-        darkBgColor: "dark:bg-green-600",
-        darkTextColor: "dark:text-green-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791975/logo/html_pe402c.png",
-      },
-      {
-        name: "CSS3",
-        color: "bg-gray-200",
-        textColor: "text-gray-800",
-        darkBgColor: "dark:bg-gray-600",
-        darkTextColor: "dark:text-gray-200",
-        logo: "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726791962/logo/css_ldx5n5.png",
-      },
-    ],
-    liveLink: "https://noobscode.netlify.app",
-    githubLink: "https://github.com/Knight9876/NoobsCode",
-    img: [
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792017/noobscode/noobscode_1_rgpx2h.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792006/noobscode/noobscode_2_dlogry.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792034/noobscode/noobscode_3_yxicoo.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792014/noobscode/noobscode_4_mfwl0w.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792024/noobscode/noobscode_5_ntrcxo.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792022/noobscode/noobscode_6_bcyu3t.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792035/noobscode/noobscode_7_gskoco.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792031/noobscode/noobscode_8_hpgilj.png",
-      "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792040/noobscode/noobscode_9_xqu010.png",
-    ],
-  },
+  // {
+  //   title: "NoobsCode",
+  //   description:
+  //     "NoobsCode is an innovative gaming website designed to make learning how to code an enjoyable and interactive experience. With its user-friendly interface and engaging gameplay, users can enhance their coding skills while having fun.",
+  //   technologies: [SKILLS.JAVASCRIPT, SKILLS.HTML5, SKILLS.CSS3],
+  //   liveLink: "https://noobscode.netlify.app",
+  //   githubLink: "https://github.com/Knight9876/NoobsCode",
+  //   img: [
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792017/noobscode/noobscode_1_rgpx2h.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792006/noobscode/noobscode_2_dlogry.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792034/noobscode/noobscode_3_yxicoo.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792014/noobscode/noobscode_4_mfwl0w.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792024/noobscode/noobscode_5_ntrcxo.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792022/noobscode/noobscode_6_bcyu3t.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792035/noobscode/noobscode_7_gskoco.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792031/noobscode/noobscode_8_hpgilj.png",
+  //     "https://res.cloudinary.com/dlnvozmgw/image/upload/v1726792040/noobscode/noobscode_9_xqu010.png",
+  //   ],
+  // },
 ];
 
 export default projects;
