@@ -29,7 +29,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="hero min-h-screen flex items-center justify-center pt-20">
+    <div id="hero" className="hero min-h-screen flex items-center justify-center">
       <div className="text-center flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32 px-4">
         {/* Profile Photo */}
         <div

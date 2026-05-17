@@ -13,6 +13,9 @@ const Contact = () => {
   const paragraphRef = useRef(null);
   const connectHeadingRef = useRef(null);
 
+  console.log(config.profile.email);
+
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +68,9 @@ const Contact = () => {
 
         <div ref={emailRef} className="mb-12">
           <a
-            href={`mailto:${config.profile.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${config.profile.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-3xl md:text-4xl font-bold text-primary-light dark:text-primary-dark hover:underline transition-all break-words"
           >
             {config.profile.email}

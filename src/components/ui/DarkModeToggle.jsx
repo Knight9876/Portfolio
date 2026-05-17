@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(true);
   const sunRef = useRef(null);
-  const moonRef = useRef(null);
 
   useEffect(() => {
     if (darkMode) {
@@ -20,12 +19,6 @@ const DarkModeToggle = () => {
     // Very slow, professional rotation
     gsap.to(sunRef.current, {
       rotation: 360,
-      duration: 25,
-      repeat: -1,
-      ease: "linear",
-    });
-    gsap.to(moonRef.current, {
-      rotation: -360,
       duration: 25,
       repeat: -1,
       ease: "linear",
@@ -60,7 +53,6 @@ const DarkModeToggle = () => {
         </div>
         {/* Moon Icon - Shown when in Light Mode (click to go Dark) */}
         <div 
-          ref={moonRef}
           className={`absolute inset-0 flex items-center justify-center transition-all duration-500 transform ${!darkMode ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
         >
            <FontAwesomeIcon icon={faMoon} className="text-slate-700 dark:text-slate-300 text-lg" />

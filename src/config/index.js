@@ -10,6 +10,10 @@ const config = {
     { name: "Projects", to: "projects" },
     { name: "Contact", to: "contact" },
   ],
+  blogs: [
+    { name: "Medium", url: "https://medium.com/@yashkamble1234567890" },
+    { name: "Hashnode", url: "https://hashnode.com/@KnightHuxley" },
+  ],
 };
 
 export default config;
